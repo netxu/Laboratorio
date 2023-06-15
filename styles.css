@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+  html {
+    font-family: 'Montserrat', sans-serif;
+    background-color:#242933;
+  }
+
+  .group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 14px;
+  }
+
+  .group form {
+    background-color: #2f3644;
+    width: 500px;
+    border: 1px outset #acbae1;
+    border-radius: 10px;
+    color: #acbae1;
+    margin-top: 10px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+  
+  .group form .title {
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #acbae1;
+  }
+
+  .group form .inputContainer {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .group form .inputContainer.error:after,
+  .group form .inputContainer.success:after{
+    content: "";
+    height: 40px;
+    width: 40px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 22px;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .group form .inputContainer.error:after{
+    background-image: url('images/error-icon.svg');
+  }
+
+  .group form .inputContainer.success:after{
+    background-image: url('images/success-icon.svg');
+  }
+
+  .group form .inputContainer label.label{
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .group form .inputContainer input.input, 
+  .group form .inputContainer input.input:active, 
+  .group form .inputContainer input.input:focus {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 3px;
+  }
+
+  .group form .inputContainer.error input.input{
+    border: 1px solid #f00;
+  }
+
+  .group form .inputContainer.success input.input{
+    border: 1px solid #0f0;
+  }
+
+  .group form .inputContainer .error-message{
+    display: none;
+    color: #f00;
+  }
+
+  .group form .inputContainer.error .error-message.show{
+    display: block;
+  }
+
+  .group form .form-btn, .container .forms form .form-btn {
+    background: #6c63ff;
+    color: white;
+    border-style: outset;
+    border-color: #0f0f0f;
+    border-radius: 5px;
+    width: 100%;
+    text-shadow: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px 10px;
+    margin: 5px 0;
+  }
+
+  .form-btn:hover {
+    background-color: #362cfa;
+  }
+
+  #success {
+    position: fixed;
+    background: #2e792e;
+    padding: 10px;
+    right: 20px;
+    top: 20px;
+    border-radius: 5px;
+  }
+
+  .container .forms{
+    display: flex;
+    gap: 20px;
+  }
+
+  .container .results table, th, td {
+    border: 1px solid #000;
+    padding: 10px;
+  }
